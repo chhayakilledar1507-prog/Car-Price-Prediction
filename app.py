@@ -38,7 +38,7 @@ st.write("Enter the details of your car and click Predict Price.")
 # Load Data
 # -----------------------------
 car = pd.read_csv("cleaned_data.csv")
-
+model = pkl.load(open("CPP.pkl","rb"))
 # -----------------------------
 # Dropdown Values
 # -----------------------------
@@ -86,8 +86,6 @@ predict = st.button("🚗 Predict Price")
 # Prediction
 # -----------------------------
 if predict:
-    model = pkl.load(open("CPP.pkl","rb"))
-
     input_df = pd.DataFrame(
         [[company, name, year, kms_driven, fuel_type]],
         columns=[
