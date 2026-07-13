@@ -36,8 +36,8 @@ st.write("Enter the details of your car and click Predict Price.")
 # -----------------------------
 # Load Data
 # -----------------------------
-model = pd.read_csv("cleaned_data.csv")
-pipe = pkl.load(open("CPP.pkl","rb"))
+car = pd.read_csv("cleaned_data.csv")
+model = pkl.load(open("CPP.pkl","rb"))
 
 # -----------------------------
 # Dropdown Values
