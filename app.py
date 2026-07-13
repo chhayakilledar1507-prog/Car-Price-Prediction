@@ -36,7 +36,7 @@ st.write("Enter the details of your car and click Predict Price.")
 # -----------------------------
 # Load Data
 # -----------------------------
-car = pd.read_csv("cleaned_data.csv")
+model = pd.read_csv("cleaned_data.csv")
 pipe = pkl.load(open("CPP.pkl","rb"))
 
 # -----------------------------
@@ -100,7 +100,7 @@ if predict:
 
     try:
 
-        prediction = pipe.predict(input_df)
+        prediction = model.predict(input_df)
 
         price = float(prediction[0][0]) if hasattr(prediction[0], "__len__") else float(prediction[0])
 
